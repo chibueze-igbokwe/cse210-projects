@@ -1,0 +1,21 @@
+// week02/Journal/Entry.cs
+using System;
+
+public class Entry
+{
+    // Member variables for a journal entry
+    public string _date;
+    public string _promptText;
+    public string _entryText;
+    public string _mood;
+
+    // Display this entry
+    public void Display()
+    {
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Prompt: {_promptText}");
+        Console.WriteLine($"Response: {_entryText}");
+        Console.WriteLine($"Mood: {_mood}");
+        Console.WriteLine();
+    }
+}
