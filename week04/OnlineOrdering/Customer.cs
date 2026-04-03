@@ -1,0 +1,28 @@
+// Represents a customer
+public class Customer
+{
+    private string _name;
+    private Address _address;
+
+    public Customer(string name, Address address)
+    {
+        _name = name;
+        _address = address;
+    }
+
+    public string GetName()
+    {
+        return _name;
+    }
+
+    // Check if customer lives in USA
+    public bool LivesInUSA()
+    {
+        return _address.IsUSA();
+    }
+
+    public Address GetAddress()
+    {
+        return _address;
+    }
+}
