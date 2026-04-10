@@ -1,9 +1,21 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the ExerciseTracking Project.");
+        List<Activity> activities = new List<Activity>();
+
+        // Create activities
+        activities.Add(new RunningActivity(new DateTime(2022, 11, 3), 30, 3.0));
+        activities.Add(new CyclingActivity(new DateTime(2022, 11, 3), 30, 6.0));
+        activities.Add(new SwimmingActivity(new DateTime(2022, 11, 3), 30, 20));
+
+        // Display summaries
+        foreach (Activity activity in activities)
+        {
+            Console.WriteLine(activity.GetSummary());
+        }
     }
 }
